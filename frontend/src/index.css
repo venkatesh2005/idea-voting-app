@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Google Sans', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f8f9fa;
+  min-height: 100vh;
+  color: #202124;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #dadce0;
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: 'Google Sans', 'Roboto', sans-serif;
+  font-weight: 500;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+
+button:active:not(:disabled) {
+  transform: scale(0.96);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.38;
+}
+
+input, textarea {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  padding: 14px 16px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  width: 100%;
+  transition: all 0.15s ease;
+  background: #fff;
+  color: #202124;
+}
+
+input:hover, textarea:hover {
+  border-color: #80868b;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #1a73e8;
+  border-width: 2px;
+  padding: 13px 15px;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #5f6368;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+  line-height: 1.6;
+}
+
+label {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: #5f6368;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    padding: 16px;
+  }
+  
+  .masonry-grid {
+    column-count: 2 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 12px;
+  }
+  
+  body {
+    font-size: 14px;
+  }
+  
+  .card {
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 640px) {
+  .masonry-grid {
+    column-count: 1 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 8px;
+  }
+  
+  input, textarea {
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+}
+
+/* Masonry Grid */
+.masonry-grid {
+  column-count: 3;
+  column-gap: 16px;
+}
