@@ -80,6 +80,3 @@ DELETE /api/ideas/:id          - Delete an idea
 - Ideas are sorted by vote count (highest first)
 - You can only vote once per idea and only delete your own ideas
 
-## License
-
-MIT
