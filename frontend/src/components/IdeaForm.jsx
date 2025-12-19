@@ -13,7 +13,7 @@ export default function IdeaForm({ onCreate, currentUser, setCurrentUser }) {
   };
 
   return (
-    <form onSubmit={submit} style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+    <form onSubmit={submit} className="form-field">
       <div>
         <label htmlFor="owner">Your Name</label>
         <input 
@@ -44,19 +44,7 @@ export default function IdeaForm({ onCreate, currentUser, setCurrentUser }) {
           onChange={e => setDescription(e.target.value)} 
         />
       </div>
-      <button type="submit" style={{
-        background: '#1a73e8',
-        color: '#fff',
-        padding: '10px 24px',
-        borderRadius: '4px',
-        fontSize: '14px',
-        fontWeight: '500',
-        textTransform: 'uppercase',
-        letterSpacing: '0.25px',
-        boxShadow: '0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15)'
-      }} 
-      onMouseOver={(e) => e.target.style.background = '#1765cc'} 
-      onMouseOut={(e) => e.target.style.background = '#1a73e8'}>
+      <button type="submit" className="btn-primary">
         Submit Idea
       </button>
     </form>
